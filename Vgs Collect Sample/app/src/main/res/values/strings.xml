@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Vgs Collect Sample</string>
+    <string name="vgs_vault_id">VGS Vault Id</string>
+    <string name="card_id">Card Id</string>
+    <string name="debit_card_token">Debit Card Token</string>
+    <string name="environment">Environment</string>
+    <string name="last_4_digits_of_card">Last 4 Digits of Card</string>
+    <string name="expiry_month_mm">Expiry Month (MM)</string>
+    <string name="expiry_year_yyyy">Expiry Year (YYYY)</string>
+    <string name="_4_digit_pin">4 Digit PIN</string>
+    <string name="submit">Submit</string>
+    <string name="sandbox">Sandbox</string>
+    <string name="production">Production</string>
+    <string name="pin_set_success">ATM Pin set successfully!</string>
+    <string name="ok">Okay</string>
+    <string name="pin_set_fail">ATM Pin set failed!</string>
+</resources>
