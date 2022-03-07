@@ -37,6 +37,7 @@ In order to start the project we need below parameters. All fields are mandatory
 - Expiry Month : Expiry month (MM) of the card
 - Expiry Year : Expiry year (YYYY) of the card
 - 4 Digit Pin : Pin you want to set for the card (It should be numeric)
+
 Notes: "Debit Card Token" can be used only once to set pin. You need to call "pintoken" api to generate new "Debit Card Token"
 
 //For Link Card
@@ -49,9 +50,8 @@ Notes: "Debit Card Token" can be used only once to set pin. You need to call "pi
 - Exp Month : Expiry month (MM) of the card
 - Exp Year : Expiry year (YYYY) of the card
 - Address : Address of the card (used static in the code)
-Notes: "Debit Card Token" can be used only once to link card. You need to call "debittoken" api to generate new "Debit Card Token"
 
-Notes: CardToken can be used only once to set pin. You need to call "pintoken" api to generate new CardToken
+Notes: "Debit Card Token" can be used only once to link card. You need to call "debittoken" api to generate new "Debit Card Token"
 
 ## Tooling
 - Android 5.0 +
