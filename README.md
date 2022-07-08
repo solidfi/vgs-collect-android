@@ -29,7 +29,7 @@ In order to start the project we need below parameters. All fields are mandatory
 
 //For Set PIN
 
-- VGS Vault ID : Talk to our solutions team (solutions@solidfi.com) to get the ID via a secured method. (It will different base on sandbox and live)
+- VGS Vault ID : The VGS vault ID's required for implementing the sample code can be requested via a Solid help desk ticket.
 - Card ID : Id of your card
 - Debit Card Token : You will get it from the "pintoken" api from the backend
 - Environment : Select live or sandbox environment
@@ -42,7 +42,7 @@ Notes: "Debit Card Token" can be used only once to set pin. You need to call "pi
 
 //For Link Card
 
-- VGS Vault ID : Talk to our solutions team (solutions@solidfi.com) to get the ID via a secured method. (It will different base on sandbox and live)
+- VGS Vault ID : The VGS vault ID's required for implementing the sample code can be requested via a Solid help desk ticket.
 - Contact ID : Id of the contact
 - Debit Card Token : You will get it from the "debittoken" api from the backend
 - Environment : Select live or sandbox environment
