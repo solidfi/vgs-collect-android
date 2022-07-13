@@ -61,7 +61,7 @@ class LinkCardActivity : AppCompatActivity() {
 
         // setting sd-pin-token as a custom header
         val header = HashMap<String, String>()
-        header["sd-pin-token"] = binding.debitCardToken.text.toString()
+        header["sd-debitcard-token"] = binding.debitCardToken.text.toString()
         vgsForm.setCustomHeaders(header)
 
         // setting custom data using the user entered parameters
