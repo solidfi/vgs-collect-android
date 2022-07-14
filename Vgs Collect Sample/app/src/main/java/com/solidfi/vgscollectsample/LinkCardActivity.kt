@@ -65,16 +65,27 @@ class LinkCardActivity : AppCompatActivity() {
         vgsForm.setCustomHeaders(header)
 
         // setting custom data using the user entered parameters
-        val data = HashMap<String, String>()
+        val data = HashMap<String, HashMap<String, Any>>()
+        val debitCard = HashMap<String, Any>()
+        debitCard["expiryMonth"] =  binding.expiryMonth.text.toString()
+        debitCard["expiryYear"] = binding.expiryYear.text.toString()
+        debitCard["cardNumber"] = binding.cardNumber.text.toString()
+
         //address is hardcoded this will be the address of the contact
-        data["address"] = "{\"addressType\": \"card\", \"city\": \"Bronx\", \"country\": \"US\", \"line1\": \"1250 Waters Pl\", \"line2\": \"\", \"postalCode\": \"10461\", \"state\": \"NY\"}"
-        data["expiryMonth"] = binding.expiryMonth.text.toString()
-        data["expiryYear"] = binding.expiryYear.text.toString()
-        data["cardNumber"] = binding.cardNumber.text.toString()
+        val address = HashMap<String, String?>()
+        address["addressType"] = "card"
+        address["line1"] = "1250 Waters Pl"
+        address["line2"] = ""
+        address["city"] = "Bronx"
+        address["state"] = "NY"
+        address["country"] = "US"
+        address["postalCode"] = "10461"
+        debitCard["address"] = address
+        data["debitCard"] = debitCard
         vgsForm.setCustomData(data)
 
         // call vgs collect link api
-        vgsForm.asyncSubmit("v1/contact/" + binding.contactId.text.toString() + "/debitcard", HTTPMethod.POST)
+        vgsForm.asyncSubmit("v1/contact/" + binding.contactId.text.toString() + "/debitcard", HTTPMethod.PATCH)
         vgsForm.addOnResponseListeners(object : VgsCollectResponseListener {
             override fun onResponse(response: VGSResponse?) {
                 hideProgress()
