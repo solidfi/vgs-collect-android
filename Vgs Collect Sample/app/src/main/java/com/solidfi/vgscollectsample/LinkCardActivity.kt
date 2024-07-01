@@ -85,7 +85,7 @@ class LinkCardActivity : AppCompatActivity() {
         vgsForm.setCustomData(data)
 
         // call vgs collect link api
-        vgsForm.asyncSubmit("v1/contact/" + binding.contactId.text.toString() + "/debitcard", HTTPMethod.PATCH)
+        vgsForm.asyncSubmit("v2/contact/" + binding.contactId.text.toString() + "/debitcard", HTTPMethod.PATCH)
         vgsForm.addOnResponseListeners(object : VgsCollectResponseListener {
             override fun onResponse(response: VGSResponse?) {
                 hideProgress()
