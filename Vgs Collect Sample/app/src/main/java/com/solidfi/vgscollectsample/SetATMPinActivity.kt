@@ -74,7 +74,7 @@ class SetATMPinActivity : AppCompatActivity() {
         vgsForm.setCustomData(data)
 
         // call vgs collect submit api
-        vgsForm.asyncSubmit("v1/card/" + binding.cardId.text.toString() + "/pin", HTTPMethod.POST)
+        vgsForm.asyncSubmit("v2/card/" + binding.cardId.text.toString() + "/pin", HTTPMethod.POST)
         vgsForm.addOnResponseListeners(object : VgsCollectResponseListener {
             override fun onResponse(response: VGSResponse?) {
                 hideProgress()
